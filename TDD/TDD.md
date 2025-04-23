@@ -50,7 +50,30 @@ Methods implemented:
 
 Prompts used:
 ```python
-# Return mean, median, and std deviation of amount grouped by category
-# Return total spending by date as a time series
-# Segment customers based on total spending
+# Create a DataAnalyzer class that takes a DataFrame and provides:
+# - Summary statistics (mean, median, std dev by category)
+# - Time series analysis (spending trends over time)
+# - Spending distribution analysis
+# - Top spending categories
+# - Customer segmentation by spending patterns
+```
+### ✅ Step 3: DataVisualizer Class (with Copilot)
+
+Methods implemented:
+- bar_chart(): bar chart of total spending per category
+- line_chart(): spending trend by date
+- pie_chart(): percentage of total by category
+- heatmap(): correlations between numeric fields
+
+Prompts used:
+```python
+# Create a DataVisualizer class that takes analysis results and generates:
+# - Bar charts for spending by category
+# - Line charts for spending over time
+# - Pie charts for spending distribution
+# - Heatmaps for correlation between variables
+# - Each method should support customization options (colors, titles, etc.)
+# - Methods should return the figure and also have an option to save to file
+```
+
 
