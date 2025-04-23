@@ -38,3 +38,19 @@ Prompts used:
 # - Parses date columns and converts data types
 # - Removes rows with missing or invalid data
 # - Provides methods to filter data by date range and category
+```
+### ✅ Step 2: DataAnalyzer Class (with Copilot)
+
+Methods implemented:
+- summary_statistics(): returns mean, median, std per category
+- time_series_analysis(): total spending grouped by date
+- spending_distribution(): amount distribution stats
+- top_spending_categories(n): top N categories by total amount
+- customer_segmentation(): customer spend segmentation using quantiles
+
+Prompts used:
+```python
+# Return mean, median, and std deviation of amount grouped by category
+# Return total spending by date as a time series
+# Segment customers based on total spending
+
