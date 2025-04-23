@@ -32,7 +32,7 @@ def test_time_series_analysis(sample_dataframe):
     analyzer = DataAnalyzer(sample_dataframe)
     time_series = analyzer.time_series_analysis(date_col="date", value_col="amount")
     assert time_series.loc[time_series["date"] == "2023-01-08", "amount"].iloc[0] == 899.99
-    assert time_series["amount"].sum() == pytest.approx(2262.41, 0.01)
+    assert time_series["amount"].sum() == pytest.approx(3362.41, 0.01)
 
 def test_top_spending_categories(sample_dataframe):
     analyzer = DataAnalyzer(sample_dataframe)

@@ -2,6 +2,7 @@ import pytest
 import pandas as pd
 from src.visualizer import DataVisualizer
 import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 
 # Sample data for testing
 TEST_DATA = {
@@ -24,25 +25,25 @@ def empty_dataframe():
 def test_bar_chart_returns_figure(sample_dataframe):
     visualizer = DataVisualizer(sample_dataframe)
     fig = visualizer.bar_chart(x="category", y="amount", title="Test Bar Chart")
-    assert isinstance(fig, plt.Figure)
+    assert isinstance(fig, Figure)
 
 
 def test_line_chart_returns_figure(sample_dataframe):
     visualizer = DataVisualizer(sample_dataframe)
     fig = visualizer.line_chart(x="date", y="amount", title="Test Line Chart")
-    assert isinstance(fig, plt.Figure)
+    assert isinstance(fig, Figure)
 
 
 def test_pie_chart_returns_figure(sample_dataframe):
     visualizer = DataVisualizer(sample_dataframe)
     fig = visualizer.pie_chart(values="category", title="Test Pie Chart", labels=sample_dataframe["category"].unique())
-    assert isinstance(fig, plt.Figure)
+    assert isinstance(fig, Figure)
 
 
 def test_heatmap_returns_figure(sample_dataframe):
     visualizer = DataVisualizer(sample_dataframe)
     fig = visualizer.heatmap(title="Test Heatmap")
-    assert isinstance(fig, plt.Figure)
+    assert isinstance(fig, Figure)
 
 
 def test_methods_handle_empty_data(empty_dataframe):
