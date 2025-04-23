@@ -93,4 +93,46 @@ Prompts used:
 # Test filtering by date range returns correct subset
 # Test that saving to file works without error
 ```
+### ✅ Step 5: CLI App in main.py (with Copilot)
+
+Features:
+- Uses argparse to parse CLI input
+- Loads and validates data
+- Performs selectable analysis:
+  - summary, time-series, top-categories, segmentation
+- Supports visualization (bar, line, pie, heatmap)
+- Optionally saves chart to file
+
+Prompts used:
+```python
+# Create a command-line interface that:
+# - Takes a CSV file path as input
+# - Allows selecting analysis type (summary, time-series, category, etc.)
+# - Allows selecting visualization type
+# - Supports saving results to files
+# - Has a help menu explaining functionality
+```
+
+## 🧪 Example CLI Commands
+
+```bash
+# Run summary statistics
+python main.py data/sample_data.csv --analysis summary
+
+# Run time series analysis
+python main.py data/sample_data.csv --analysis time-series
+
+# Get top spending categories with a bar chart
+python main.py data/sample_data.csv --analysis top-categories --plot bar
+
+# Generate and save a pie chart to a file
+python main.py data/sample_data.csv --analysis top-categories --plot pie --output results/pie.png
+
+# Run customer segmentation analysis
+python main.py data/sample_data.csv --analysis segment
+
+# Generate and save a heatmap of correlations
+python main.py data/sample_data.csv --analysis summary --plot heatmap --output results/heatmap.png
+
+
 
