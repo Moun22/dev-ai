@@ -75,5 +75,22 @@ Prompts used:
 # - Each method should support customization options (colors, titles, etc.)
 # - Methods should return the figure and also have an option to save to file
 ```
+### ✅ Step 4: Testing (with Copilot)
 
+Tests written for:
+- ✅ DataLoader:
+    - load_data() returns correct structure
+    - raises error if columns are missing
+    - date/category filters return expected rows
+- ✅ DataAnalyzer:
+    - summary stats and top categories are correct
+- ✅ DataVisualizer:
+    - plotting methods return matplotlib figures
+
+Prompts used:
+```python
+# Test that data is loaded correctly
+# Test filtering by date range returns correct subset
+# Test that saving to file works without error
+```
 
