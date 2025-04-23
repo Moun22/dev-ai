@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+
+# macOS system files
+.DS_Store
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code or IntelliJ settings
+.idea/
+.vscode/
+
+# Environment files
+.env
+
+# Output files
+*.log
+# Ignore all CSVs except the sample data
+*.csv
+!data-analyzer/data/sample_data.csv
+*.json
+*.sqlite3
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
